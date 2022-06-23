@@ -1,0 +1,4 @@
+{
+    "extends": "./cypress.config.ts",
+    "baseUrl": "https://app.daisy.crop.photo"
+}

@@ -1,0 +1,39 @@
+.amount {
+  margin: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.amountInputField {
+  margin: 5px;
+}
+.checkbox {
+  margin: 5px;
+  font-size: 16px;
+  color: #061425;
+}
+.checkboxSubText {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #798088;
+}
+.firstNameTitle {
+  width: 50%;
+  margin: 5px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+}
+.lastNameTitle {
+  width: 50%;
+  margin: 5px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+}
+.firstName {
+  margin: 5px;
+}
+.lastName {
+  margin: 5px;
+}

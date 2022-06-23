@@ -1,0 +1,160 @@
+/* new billing page */
+.planStatusContainer {
+  background: #ffffff;
+  border: 1px solid #eff1f3;
+  height: 98px;
+  padding: 22px;
+  margin: 45px 40px 21px 40px;
+  box-shadow: 0px 0.5px 1px rgba(6, 20, 37, 0.05);
+  border-radius: 6px;
+}
+.planStatus {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  display: inline-block;
+}
+.planRate {
+  font-weight: normal;
+  font-size: 16px;
+}
+.changePlan {
+  float: right;
+  overflow: hidden;
+}
+.planUpdateContainer {
+  /* height: 102px; */
+  background: #ffffff;
+  border: 1px solid #eff1f3;
+  padding: 22px;
+  padding-bottom: 0px;
+  margin: 45px 40px 0px 40px;
+  box-shadow: 0px 0.5px 1px rgba(6, 20, 37, 0.05);
+  border-radius: 6px;
+}
+.balanceContainer {
+  /* width: 240px; */
+  display: inline-block;
+}
+.balanceTitle {
+  font-size: 14px;
+  color: #626970;
+  margin: 0px;
+}
+.balance {
+  font-weight: bold;
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 8px;
+}
+.cardExpiryDate {
+  font-size: 14px;
+  line-height: 20px;
+  color: #626970;
+  display: inline-block;
+}
+.addCredits {
+  display: inline-block;
+  padding: 2px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  margin: 0px;
+  min-width: 75px !important;
+}
+.buttonLabelColor {
+  color: #0038ff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.helpIcon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.cardDetail {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px;
+}
+.update {
+  float: right;
+  overflow: hidden;
+  padding: 2px !important;
+  width: 49px !important;
+  height: fit-content !important;
+  margin: 0px;
+  min-width: 49px !important;
+}
+.recieptHeading {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  margin: 45px 40px 16px 40px;
+}
+.divider {
+  height: 1px;
+  background: #d9dde1;
+  margin: 0px 40px 21px 40px;
+}
+.receiptContainer {
+  margin: 0px 40px 4px 40px;
+  background: #ffffff;
+  border: 1px solid #eff1f3;
+  height: 48px;
+  padding: 12px 16px 12px 16px;
+  box-shadow: 0px 0.5px 1px rgba(6, 20, 37, 0.05);
+  border-radius: 6px;
+}
+.cardType {
+  display: inline-block;
+  margin: 0px 16px 21px 0px;
+}
+.cardDetailsCol {
+  align-items: right;
+  float: right;
+}
+.recieptInfo {
+  font-size: 16px;
+}
+.viewReciept {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0038ff;
+  cursor: pointer;
+  float: right;
+}
+.recieptAmount {
+  font-size: 16px;
+  float: right;
+}
+.useDifferentCard {
+  overflow: hidden;
+  padding: 2px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  margin: 0px;
+  min-width: none !important;
+}
+.learnMore {
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #061425;
+}
+.creditsAmount {
+  margin: 20px 0px 8px 0px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.Header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(239, 241, 243);
+  background: #ffffff;
+  border-bottom: 1px solid #eff1f3;
+  box-shadow: 0px 0.5px 1px rgb(6 20 37 / 5%);
+}

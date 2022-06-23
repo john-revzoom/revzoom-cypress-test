@@ -1,0 +1,324 @@
+{
+  "UNKNOWN_ERROR_DETAILS": "Oops, that's unexpected. Do you mind reporting the steps that led to this, in our chat, so we can troubleshoot ASAP.",
+  "UNKNOWN_ERROR_TITLE": "Unknown Error",
+  "FAILED_TO_DETECT_TENANT_ID": "Failed to detect tenant id.",
+  "NO_SUITABLE_MARKER_FOUND": "No face markers found.",
+  "login": {
+    "forgot_password_link": "Forgot password?",
+    "title": "Welcome back",
+    "error": {
+      "not_valid": "Enter a valid email."
+    },
+    "placeholders": {
+      "email": "Enter email",
+      "password": "Enter password"
+    },
+    "sign_in": "Sign in",
+    "signing_in": "Signing in",
+    "create_account": "Create an account",
+    "sso": {
+      "google": "Continue with Google",
+      "facebook": "Continue with Facebook",
+      "amazon": "Continue with Amazon",
+      "apple": "Continue with Apple"
+    }
+  },
+  "signup": {
+    "title": "Create an account",
+    "subtitle": "No credit card required. Get started in minutes.",
+    "labels": {
+      "email": "Enter work email",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "password": "Enter password",
+      "has_existing_account": "I already have an account",
+      "create_account": "Create an account",
+      "creating_account": "Creating an account"
+    },
+    "verify": {
+      "title": "Verify your email",
+      "desc": "We’ve send a verification code to {{id}}. Please check your email.",
+      "enter_code": "Enter code",
+      "verify_code": "Verify code",
+      "back_to_daisy": "Back to sign in",
+      "verifying_code": "Verifying code..."
+    },
+    "only_work_email_allowed_error": "Only work email is allowed to signup.",
+    "account_created_successfully": "Your account has been created successfully.",
+    "success": "Your account has been created successfully"
+  },
+  "forgot_password": {
+    "title": "Forgot password",
+    "help_text": "Enter your email below to reset your password.",
+    "email": {
+      "label": "Enter email"
+    },
+    "errors": {
+      "not_match": "Passwords don't match."
+    },
+    "placeholders": {
+      "new_password": "Enter your new password",
+      "confirm_password": "Confirm your new password",
+      "email": ""
+    },
+    "back_to_signin": "Back to sign in",
+    "reset_password": "Reset password",
+    "reset_password_description": "Enter your new password and select next when you’re done."
+  },
+  "verify_code": {
+    "title": "Verify your identity",
+    "cta": "Enter your verification code",
+    "submit": "Confirm password reset",
+    "desc": "Before we can let you through, we need to verify your identity. You should have received an email with a verification code",
+    "sending": "Sending code",
+    "next": "Next",
+    "resend_otp": "Resend email",
+    "resending_otp": "Resending email...",
+    "otp_cannot_be_blank": "OTP can't be blank",
+    "invalid_otp_error": "OTP Code must be of 6 digits. Please enter correct the OTP.",
+    "sent_new_otp": "A new email is sent, you should receive it shortly",
+    "verifying_code": "Verifying code"
+  },
+  "home": {
+    "home": "Home",
+    "start_automation": "Start an automation",
+    "smart_crop": "Smart crop",
+    "smart_labels": "Smart labels",
+    "smart_clip": "Smart clip",
+    "available": "Available",
+    "coming_soon": "Coming Soon",
+    "projects": "Projects",
+    "no_more_result": "No more automation projects found",
+    "no_data": "No automation projects are configured yet. Go ahead, create one!",
+    "filter": {
+      "error": "Type at-least two characters to search"
+    },
+    "load_more": "Load More",
+    "search_placeholder": "Find"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile_and_security": "Profile and Security",
+    "profile": {
+      "label": "Profile"
+    },
+    "profile_and_security_desc": "Update your name, email, avatar. Keep your data and account secure.",
+    "billing": "Billing",
+    "billing_desc": "Manage your credit card, view billing reports and more.",
+    "notifications": "Notifications",
+    "notifications_desc": "Choose how and where you want app notifications to appear.",
+    "data": "Data Privacy",
+    "data_desc": "Manage your data, delete it or remove your account.",
+    "logout": "Logout",
+    "feedback": "Feedback",
+    "save": "Save",
+    "form": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "full_name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "change_password": "Change password",
+      "new_password": "New password",
+      "password_confirm": "Confirm new password"
+    },
+    "sso_login_desc": "Logged in with {{providerName}}",
+    "errors": {
+      "invalid_email": "Invalid email",
+      "password_not_match": "Password does not match"
+    }
+  },
+  "billing": {
+    "no_credit_card": "No credit card setup",
+    "no_credit_card_desc": "You will need to add a credit card in order to access paid features.",
+    "add_credit_card": "Add Credit Card",
+    "no_invoices": "No invoices",
+    "no_invoices_desc": "You don’t have any invoices at the moment. Once you do, they will appear here.",
+    "amount_due": "Amount due",
+    "credit_card": "Credit card",
+    "remove_credit_card": "Remove credit card",
+    "remove": "Remove",
+    "cancel": "Cancel",
+    "remove_confirm_text": "Are you sure you want to remove your credit card? You will no longer have access to paid features.",
+    "one_time_payment": "One time payment",
+    "one_time_payment_desc": "Make a one time payment to clear a pending balance or add account credits.",
+    "one_time_payment_modal_title": "Make a one time payment",
+    "one_time_payment_modal_ok": "Pay",
+    "save_as_default": "Save as default credit card",
+    "confirm_check_text": "this will remove your current credit card"
+  },
+  "configuration": {
+    "left_panel": {
+      "crop_marker": {
+        "label": "Crop marker",
+        "short_desc": "This will serve as a reference point for the automated crop action.",
+        "link_text": "Learn more"
+      },
+      "crop_type": {
+        "label": "Crop type",
+        "crop_from_card": {
+          "label": "Crop from",
+          "subtitle": "Example: Crop the image from below the nose"
+        },
+        "crop_around_card": {
+          "label": "Crop around",
+          "subtitle": "Example: Crop the image around the face"
+        },
+        "edit_button": "Edit crop type",
+        "next_button": "Continue"
+      },
+      "crop_side": {
+        "label": "Crop side",
+        "top": "Top",
+        "bottom": "Bottom",
+        "left": "Left",
+        "right": "Right"
+      },
+      "checkbox_label": "Include marker's bounding box",
+      "position": {
+        "label": "Position"
+      },
+      "crop_size": {
+        "label": "Crop size",
+        "short_desc": "You can change values here to resize the cropped area.",
+        "link_text": "Learn more"
+      }
+    }
+  },
+  "upload": {
+    "files_skipped": "Some files are skipped! Only jpeg, png, webp and gif upto 25MB are supported.",
+    "drag_and_dropped": {
+      "title": "Drag and drop your media",
+      "subtitle": "Feel free to drop multiple files in one go.",
+      "desc_1": "Our media uploader is designed for ingesting large",
+      "desc_2": "batches of files quickly from your desktop."
+    },
+    "select_from_device": "Select from device",
+    "select_media_modal": {
+      "title": "Start smart crop",
+      "cancel_text": "Cancel",
+      "ok_text": "Start smart crop",
+      "desc": "You're about to start the smart crop automation on selected files.",
+      "next": "Next",
+      "prev": "Previous"
+    },
+    "select_format": {
+      "title": "Select size",
+      "custom_formats": "Custom sizes"
+    },
+    "add_custom_size": {
+      "title": "Add custom size",
+      "width": {
+        "label": "Width",
+        "placeholder": "Enter width"
+      },
+      "height": {
+        "label": "Height",
+        "placeholder": "Enter height"
+      },
+      "errors": {
+        "missing_width": "Width is required",
+        "missing_height": "Height is required",
+        "custom_size_exists": "Custom size already exists."
+      },
+      "save_size": "Save size",
+      "cancel": "Cancel",
+      "confirm_delete_title": "Delete Custom Size",
+      "confirm_delete_desc": "Are you sure you want to delete this custom size?"
+    },
+    "parameters": {
+      "title": "Parameters",
+      "subtitle": "Background",
+      "desc": "We will add a background if the image doesn’t completely fill the available space",
+      "errors": {
+        "hex_format": "Please enter a valid hex value"
+      }
+    },
+    "no_search_result": "No results found.",
+    "upload_more": "Upload more",
+    "upload_more_tooltip_text": "For an even faster upload experience, try drag-n-drop to anywhere on this page.",
+    "page_out_upload_cancel_confirm": "Upload is in progress. Do you want to cancel the uploads?",
+    "confirm_upload_cancel": "Are you sure you want to cancel the upload?",
+    "cancel_upload_ok_button_text": "Cancel upload",
+    "cancel_upload_cancel_button_text": "Don't cancel"
+  },
+  "in_progress": {
+    "left_panel": {
+      "tip": {
+        "title": "Tip",
+        "desc": "You can close this window worry free. We'll continue processing your media."
+      },
+      "board_report": {
+        "elapsed_time": "Elapsed time",
+        "approx": "Approximate",
+        "per_image": "per crop",
+        "average_of": "Average of",
+        "eta": "ETA",
+        "cost": "Cost",
+        "cost_estimate": "Cost estimate",
+        "saved": "Saved"
+      },
+      "summary": {
+        "title": "Smart crop automation crop from top of nose",
+        "completed_on_prefix": "Completed on",
+        "duplicate_label": "Duplicate smart crop",
+        "rename_label": "Rename",
+        "favorite_label": "Favorite"
+      },
+      "pause": "Pause",
+      "resume": "Resume",
+      "stop": "Stop",
+      "stop_modal": {
+        "title": "Stop smart crop",
+        "ok_text": "Stop smart crop",
+        "cancel_text": "Don't stop",
+        "desc": "You will need to duplicate this smart crop if you want to restart it."
+      }
+    },
+    "summary": {
+      "paused_toast_label": "This smart crop automation is currently paused"
+    }
+  },
+  "summary": {
+    "automation_running": {
+      "title": "Cropping in progress",
+      "desc": "We’re currently processing your media. We’ll alert you once the crops are ready. Feel free to close this now."
+    },
+    "download": {
+      "label": "Download",
+      "download_desc": "You're {{count}} crops zip is ready to download.",
+      "download_with_count": "Download {{count}}",
+      "generating_zip_file": "Generating zip file...",
+      "downloading": "Downloading..."
+    },
+    "zip_modal": {
+      "title": "Download zip",
+      "download": "Download",
+      "cancel": "Cancel"
+    },
+    "download_all_modal": {
+      "title": "Are you sure you want to download {{count}} crop images?",
+      "ok_text": "Start download",
+      "cancel_text": "Cancel",
+      "desc": "You can not undo this action."
+    }
+  },
+  "media": {
+    "social_media": "Social Media",
+    "custom_format": "Custom Format",
+    "original": "Original",
+    "add_custom": "Add custom",
+    "image_not_loaded": "Image cannot be loaded."
+  },
+  "instagram": "Instagram",
+  "twitter": "Twitter",
+  "facebook": "Facebook",
+  "linkedin": "Linkedin",
+  "pinterest": "Pinterest",
+  "loading": "Loading",
+  "asset": {
+    "confirm_delete": "Are you sure you want to delete this asset?",
+    "delete": "Delete",
+    "do_not_delete": "Don't delete"
+  }
+}
