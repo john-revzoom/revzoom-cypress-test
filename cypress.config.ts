@@ -24,10 +24,10 @@ module.exports = defineConfig({
     specPattern: "cypress/integration/**/*.spec.ts",
     supportFile: "cypress/support/commands.ts",
     env: {
-      username: "compass-having@4yyaqdie.mailosaur.net",
+      username: "practice-taste@uxwbm2id.mailosaur.net",
       password: "P@ssw0rd123",
-      MAILOSAUR_API_KEY: "jIXu9G8IyYLO8bVX",
-      serverId: "4yyaqdie"
+      MAILOSAUR_API_KEY: "a3e3ZfkWRFfTkzSL",
+      serverId: "uxwbm2id"
     },
     setupNodeEvents(on, config) {
       // on("after:spec", (spec, results) => {

@@ -37,11 +37,10 @@ describe("Forgot Password", () => {
   });
 
   it("should be able to send a new password request and verify code successfully", () => {
-    const newPassword = `P@ssw0rd${makeId(5)}`;
     navigateToResetPasswordPage();
     cy.get("h2").should("not.exist");
-    cy.get("[type='password']").first().type(newPassword);
-    cy.get("[type='password']").last().type(newPassword);
+    cy.get("[type='password']").first().type(Cypress.env("password"));
+    cy.get("[type='password']").last().type(Cypress.env("password"));
     cy.get("[type='button']").should("be.enabled").click({ force: true });
     cy.get("h2").contains("Verify your identity").should("be.visible");
     cy.wait(10000);
@@ -66,18 +65,17 @@ describe("Forgot Password", () => {
   });
 
   it("should be able to send resend password request and verify code successfully", () => {
-    const newPassword = `P@ssw0rd${makeId(5)}`;
     navigateToResetPasswordPage();
     cy.get("h2").should("not.exist");
-    cy.get("[type='password']").first().type(newPassword);
-    cy.get("[type='password']").last().type(newPassword);
+    cy.get("[type='password']").first().type(Cypress.env("password"));
+    cy.get("[type='password']").last().type(Cypress.env("password"));
     cy.get("[type='button']").should("be.enabled").click({ force: true });
     cy.get(".ant-message").should("not.exist");
     cy.get("h2").contains("Verify your identity").should("be.visible");
     cy.wait(30000);
     cy.get("p").contains("Resend email").click({ force: true });
     cy.get(".ant-message").should("not.exist");
-    cy.get("p").contains("A new email is sent, you should receive it shortly")
+    cy.get("p").contains("A new email is sent, you should receive it shortly");
     cy.wait(10000);
     cy.mailosaurGetMessage(Cypress.env("serverId"), {
       sentTo: Cypress.env("username")
