@@ -77,6 +77,7 @@ export function UserPanel({ selectedPage }: UserPanelProps) {
             icon={<SettingsIcons />}
             label=""
             onClick={navigateToSettings}
+            dataCy="settingIcon"
           />
         </Col>
       </Row>

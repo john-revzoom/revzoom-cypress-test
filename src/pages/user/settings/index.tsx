@@ -134,8 +134,8 @@ export default function Settings() {
             </Col>
           </Row>
           <Divider className={styles.divider} />
-          <Button size="large" onClick={logout} type="link">
-            <div className={styles.settingsPageLogoutButton}>
+          <Button size="large" onClick={logout} type="link" data-cy="logoutBtn">
+            <div className={styles.settingsPageLogoutButton} >
               {t("settings.logout")}
               <div style={{ marginLeft: "0.65rem", marginTop: "6px" }}>
                 <Image width={20} height={20} src="/images/logout-icon.svg" />

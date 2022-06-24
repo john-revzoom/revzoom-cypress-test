@@ -26,15 +26,11 @@ export const findAndClickMenuItemInKebab = (name: string) => {
 };
 
 export const checkModalIfVisible = () => {
-  cy.get(".ant-modal").should(el => {
-    expect(el).to.be.visible;
-  });
+  cy.get(".ant-modal").should("be.visible");
 };
 
 export const checkModalIfNotVisible = () => {
-  cy.get(".ant-modal").should(el => {
-    expect(el).to.not.visible;
-  });
+  cy.get(".ant-modal").should("not.exist");
 };
 
 export const navigateToSmartCropConfigPage = () => {

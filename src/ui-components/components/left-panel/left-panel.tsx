@@ -61,7 +61,8 @@ export function LeftPanel({selectedPage = NAVIGATION_MENU.HOME}: LeftPanelProps)
         icon: selectedPage == NAVIGATION_MENU.HOME ? <HomeSelectedIcon /> : <HomeIcon />,
         label: t("home.home"),
         selected: selectedPage === NAVIGATION_MENU.HOME,
-        onClick: navigateToHome
+        onClick: navigateToHome,
+        dataCy: "home"
       }
     ];
   }
@@ -73,6 +74,7 @@ export function LeftPanel({selectedPage = NAVIGATION_MENU.HOME}: LeftPanelProps)
       label={t("settings.billing")}
       selected={false}
       onClick={navigateToBilling}
+      dataCy="billing"
     />
   );
   const feedbackButton = (
@@ -83,6 +85,7 @@ export function LeftPanel({selectedPage = NAVIGATION_MENU.HOME}: LeftPanelProps)
       label={t("settings.feedback")}
       selected={false}
       onClick={() => dispatchIntercomSurveyEvent()}
+      dataCy="feedback"
     />
   );
   let divider = <Divider className={styles.divider} key="divider" />;

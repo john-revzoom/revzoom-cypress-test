@@ -6,6 +6,7 @@ import { Button, PrimaryButton, ButtonProps } from "../../../button";
 
 export type NavigationListItemProps = ButtonProps & {
   selected: boolean;
+  dataCy: string;
 };
 
 export type NavigationListProps = {
@@ -25,6 +26,7 @@ export function NavigationListItem(item: NavigationListItemProps) {
       icon={item.icon}
       label={item.label}
       onClick={item.onClick}
+      dataCy={item.dataCy}
     />
   );
 }

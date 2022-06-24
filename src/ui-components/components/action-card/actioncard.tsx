@@ -25,7 +25,7 @@ export type ActionCardProps = {
 
 export function ActionCard({ title, description, icon, onClick }: ActionCardProps) {
   return (
-    <div className={styles.actionCardContainer} onClick={onClick}>
+    <div className={styles.actionCardContainer} onClick={onClick} data-cy="actionCard">
       <div className={styles.actionCardIcon}>
         <img src={icon} className={styles.icon} />
       </div>
