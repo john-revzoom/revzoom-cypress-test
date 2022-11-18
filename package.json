@@ -16,10 +16,10 @@
     "tsc": "tsc",
     "start:test": "set DOT_ENV=\"test\" && next start",
     "build:test": "set DOT_ENV=\"test\" && next build",
-    "cy:run": "cypress run --e2e",
-    "cy:dev": "set DOT_ENV=\"development\" && cypress run --e2e --config baseUrl=https://app.dev.crop.photo",
-    "cy:daisy": "set DOT_ENV=\"development\" && cypress run --e2e --config baseUrl=https://app.dev.crop.photo",
-    "cy:beta": "set DOT_ENV=\"development\" && cypress run --e2e --config baseUrl=https://app.dev.crop.photo"
+    "cy:run": "cypress run --e2e --record --key 60804ff0-c839-446b-93bc-a8af516e5c89",
+    "cy:dev": "cypress run --e2e --config baseUrl=https://app.dev.crop.photo ",
+    "cy:daisy": "cypress run --e2e --config baseUrl=https://app.daisy.crop.photo",
+    "cy:beta": "cypress run --e2e --config baseUrl=https://app.crop.photo"
   },
   "dependencies": {
     "@ant-design/icons": "4.7.0",
@@ -62,6 +62,7 @@
   "devDependencies": {
     "@cypress/react": "^5.12.5",
     "@cypress/webpack-dev-server": "^1.8.4",
+    "@next/swc-darwin-arm64": "^12.1.4",
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",

@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 module.exports = defineConfig({
+  projectId: "9mirv8",
   // setupNodeEvents can be defined in either
   // the e2e or component configuration
   reporter: "cypress-multi-reporters",
@@ -16,7 +17,7 @@ module.exports = defineConfig({
     },
     mochaJunitReporterReporterOptions: {
       mochaFile: "cypress/reports/junit/results-[hash].xml"
-    },
+    }
   },
   video: false,
   e2e: {
@@ -24,10 +25,11 @@ module.exports = defineConfig({
     specPattern: "cypress/integration/**/*.spec.ts",
     supportFile: "cypress/support/commands.ts",
     env: {
-      username: "practice-taste@uxwbm2id.mailosaur.net",
+      username: "teeth-frog@2yguhweg.mailosaur.net",
       password: "P@ssw0rd123",
-      MAILOSAUR_API_KEY: "a3e3ZfkWRFfTkzSL",
-      serverId: "uxwbm2id"
+      MAILOSAUR_API_KEY: "3fb6elGO1lxjTP8j",
+      serverId: "2yguhweg",
+      emailDomainName: "2yguhweg.mailosaur.net"
     },
     setupNodeEvents(on, config) {
       // on("after:spec", (spec, results) => {
@@ -42,7 +44,7 @@ module.exports = defineConfig({
       //     }
       //   }
       // });
-      require('cypress-mochawesome-reporter/plugin')(on);
+      require("cypress-mochawesome-reporter/plugin")(on);
       on("task", {
         log(message) {
           console.log(message);
@@ -50,7 +52,6 @@ module.exports = defineConfig({
           return null;
         }
       });
-      
     }
   }
 });

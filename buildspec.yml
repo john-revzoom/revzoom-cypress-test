@@ -1,0 +1,30 @@
+version: 0.2
+
+#
+# AWS CodeBuild spec, to build locally on your desktop use one of these -
+#  codebuild_build.sh -c -b ./buildspec-webserver.yml  -i public.ecr.aws/k8x9x6i3/evolphin-pico/aws-codebuild-env:1.0  -a ../out/
+#  codebuild_build.sh -c -p $AWS_DEFAULT_PROFILE  -b ./buildspec-webserver.yml  -i public.ecr.aws/k8x9x6i3/evolphin-pico/aws-codebuild-env:1.0  -a ../out/ -e /tmp/code.env
+env:
+  variables:
+    CI: "true"
+phases:
+  preTest:
+    on-failure: ABORT
+    commands:
+      - npm install
+      - npm install wait-on
+      - npm install -D cypress @cypress/react cypress-mailosaur cypress-mochawesome-reporter cypress-multi-reporters junit-report-merger mocha mocha-junit-reporter
+      - "npm run dev & npx wait-on http://localhost:3006"
+  test:
+    on-failure: ABORT
+    commands:
+      - echo Cypress run started
+      # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
+      - git branch --show-current
+      - export BUILD_ENV=${BUILD_ENV:-$(scripts/aws/codebuild/branch-abbrev.sh)}
+      - export AWS_CODEBUILD_VERSION=$(scripts/aws/codebuild/semantic_version.sh)
+      - echo Build version .. $AWS_CODEBUILD_VERSION
+      #run cypress in desired environment that is connected to cypress cloud
+      - "npm run cy:run"
+    finally:
+      - rm -rf /root/.npm
