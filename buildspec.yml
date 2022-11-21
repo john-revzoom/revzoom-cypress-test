@@ -12,8 +12,6 @@ phases:
     on-failure: ABORT
     commands:
       - npm install --no-optional
-      - npm install wait-on -D
-      - "npm run dev & npx wait-on http://localhost:3006"
   build:
     on-failure: ABORT
     commands:
@@ -21,6 +19,6 @@ phases:
       # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
       - git branch --show-current
       #run cypress in desired environment that is connected to cypress cloud
-      - "npm run cy:run"
+      - "npm run cy:run:dev"
     finally:
       - rm -rf /root/.npm
