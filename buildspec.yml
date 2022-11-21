@@ -19,6 +19,13 @@ phases:
       # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
       - git branch --show-current
       #run cypress in desired environment that is connected to cypress cloud
-      - "npm run cy:dev"
+      - "cypress run --e2e --config baseUrl=https://app.dev.crop.photo --record --key 60804ff0-c839-446b-93bc-a8af516e5c89"
+    reports:
+      junit-web-server-reports:
+        files:
+          - "**/TEST-*.xml"
+        base-directory: "cypress/reports/test-results"
+        file-format: JUNITXML
+        discard-paths: no
     finally:
       - rm -rf /root/.npm
