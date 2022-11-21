@@ -20,12 +20,12 @@ phases:
       - git branch --show-current
       #run cypress in desired environment that is connected to cypress cloud
       - npm run cy:$BUILD_ENV
-    reports:
-      junit-web-server-reports:
-        files:
-          - "**/TEST-*.xml"
-        base-directory: "cypress/reports/test-results"
-        file-format: JUNITXML
-        discard-paths: no
     finally:
       - rm -rf /root/.npm
+reports:
+  junit-web-server-reports:
+    files:
+      - "**/TEST-*.xml"
+    base-directory: "cypress/reports/test-results"
+    file-format: JUNITXML
+    discard-paths: no
