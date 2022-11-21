@@ -22,10 +22,18 @@ phases:
       - npm run cy:$BUILD_ENV
     finally:
       - rm -rf /root/.npm
+artifacts:
+  # end up in S3 output bucket configured with CodeBuild
+  files:
+    - "libs/pico-server-*.jar"
+  base-directory: "cypress/build"
+cache:
+  paths:
+    - ".next/*"
 reports:
   junit-web-server-reports:
     files:
       - "**/TEST-*.xml"
-    base-directory: "cypress/reports/test-results"
+    base-directory: "cypress/build/test-results"
     file-format: JUNITXML
     discard-paths: no
