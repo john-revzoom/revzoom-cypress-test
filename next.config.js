@@ -36,23 +36,23 @@ module.exports = withPlugins([[withTM]], {
 
     return config;
   },
-  generateBuildId: async () => {
-    let version;
-    let error;
-    if (process.env.AWS_CODEBUILD_VERSION) {
-      version = process.env.AWS_CODEBUILD_VERSION;
-    } else {
-      const { stdout, stderr } = await exec("git describe --tags --dirty --broken --match v*");
-      version = stdout;
-      error = stderr;
-    }
-    if (error) {
-      console.error("Error ", error);
-      process.exit(1);
-    }
-    console.info("Version detection:", version);
-    return version;
-  },
+  // generateBuildId: async () => {
+  //   let version;
+  //   let error;
+  //   if (process.env.AWS_CODEBUILD_VERSION) {
+  //     version = process.env.AWS_CODEBUILD_VERSION;
+  //   } else {
+  //     const { stdout, stderr } = await exec("git describe --tags --dirty --broken --match v*");
+  //     version = stdout;
+  //     error = stderr;
+  //   }
+  //   if (error) {
+  //     console.error("Error ", error);
+  //     process.exit(1);
+  //   }
+  //   console.info("Version detection:", version);
+  //   return version;
+  // },
   experimental: {
     outputStandalone: true
   },
