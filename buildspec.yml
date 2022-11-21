@@ -15,7 +15,7 @@ phases:
       - npm install wait-on
       - npm install -D cypress @cypress/react cypress-mailosaur cypress-mochawesome-reporter cypress-multi-reporters junit-report-merger mocha mocha-junit-reporter
       - "npm run dev & npx wait-on http://localhost:3006"
-  test:
+  build:
     on-failure: ABORT
     commands:
       - echo Cypress run started
