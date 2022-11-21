@@ -8,7 +8,7 @@ env:
   variables:
     CI: "true"
 phases:
-  preTest:
+  install:
     on-failure: ABORT
     commands:
       - npm install
