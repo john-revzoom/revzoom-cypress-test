@@ -42,7 +42,7 @@ module.exports = withPlugins([[withTM]], {
     if (process.env.AWS_CODEBUILD_VERSION) {
       version = process.env.AWS_CODEBUILD_VERSION;
     } else {
-      const { stdout, stderr } = await exec("git describe --tags --dirty --broken --match v*");
+      const { stdout, stderr } = await exec("git describe --tags");
       version = stdout;
       error = stderr;
     }
@@ -58,7 +58,7 @@ module.exports = withPlugins([[withTM]], {
   },
   env: {
     BUILD_VERSION:
-      process.env.AWS_CODEBUILD_VERSION || execSync("git describe --tags --dirty --broken --match v*").toString("utf8"),
+      process.env.AWS_CODEBUILD_VERSION || execSync("git describe --tags").toString("utf8"),
     INTERCOM_ID: process.env.NEXT_PUBLIC_INTERCOM_APP_ID
   }
 });
