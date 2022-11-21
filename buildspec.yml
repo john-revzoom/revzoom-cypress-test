@@ -20,9 +20,6 @@ phases:
       - echo Cypress run started
       # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
       - git branch --show-current
-      - export BUILD_ENV=${BUILD_ENV:-$(scripts/aws/codebuild/branch-abbrev.sh)}
-      - export AWS_CODEBUILD_VERSION=$(scripts/aws/codebuild/semantic_version.sh)
-      - echo Build version .. $AWS_CODEBUILD_VERSION
       #run cypress in desired environment that is connected to cypress cloud
       - "npm run cy:run"
     finally:
