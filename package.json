@@ -62,7 +62,6 @@
   "devDependencies": {
     "@cypress/react": "^5.12.5",
     "@cypress/webpack-dev-server": "^1.8.4",
-    "@next/swc-darwin-arm64": "^12.1.4",
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
@@ -100,6 +99,7 @@
     "webpack-dev-server": "^3.11.3"
   },
   "optionalDependencies": {
-    "fsevents": "*"
+    "fsevents": "*",
+    "@next/swc-darwin-arm64": "^12.1.4"
  }
 }
