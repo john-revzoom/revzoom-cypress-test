@@ -18,6 +18,7 @@ phases:
       - echo Cypress run started
       # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
       - git branch --show-current
+      - pwd
       #run cypress in desired environment that is connected to cypress cloud
       - npm run cy:$BUILD_ENV
     finally:
@@ -33,7 +34,7 @@ phases:
 reports:
   junit-web-server-reports:
     files:
-      - "**/results-[hash].xml"
+      - "**/results-*.xml"
     base-directory: "cypress/reports/junit"
     file-format: JUNITXML
     discard-paths: no
