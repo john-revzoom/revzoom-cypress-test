@@ -2,16 +2,8 @@ const path = require("path");
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 const execSync = require("child_process").execSync;
-/*
- *
- */
-const withPlugins = require("next-compose-plugins");
 
-// Tell webpack to compile the "bar" package, necessary if you're using the export statement for example
-// https://www.npmjs.com/package/next-transpile-modules
-const withTM = require("next-transpile-modules");
-
-module.exports = withPlugins([[withTM]], {
+module.exports = {
   reactStrictMode: true,
   generateBuildId: async () => {
     let version;
@@ -36,4 +28,4 @@ module.exports = withPlugins([[withTM]], {
   env: {
     BUILD_VERSION: process.env.AWS_CODEBUILD_VERSION || execSync("git describe --tags").toString("utf8")
   }
-});
+};

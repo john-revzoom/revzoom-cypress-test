@@ -8,13 +8,13 @@ module.exports = defineConfig({
   reporterOptions: {
     husky: "^7.0.4",
     reporterEnabled: "cypress-mochawesome-reporter, mocha-junit-reporter",
-    cypressMochawesomeReporterReporterOptions: {
-      reportDir: "cypress/reports/html",
-      charts: true,
-      reportPageTitle: "app.dev.crop.photo local test suite",
-      embeddedScreenshots: true,
-      inlineAssets: true
-    },
+    // cypressMochawesomeReporterReporterOptions: {
+    //   reportDir: "cypress/reports/html",
+    //   charts: true,
+    //   reportPageTitle: "app.dev.crop.photo local test suite",
+    //   embeddedScreenshots: true,
+    //   inlineAssets: true
+    // },
     mochaJunitReporterReporterOptions: {
       mochaFile: "cypress/reports/junit/results-[hash].xml"
     }
