@@ -26,14 +26,14 @@ artifacts:
   # end up in S3 output bucket configured with CodeBuild
   files:
     - "libs/pico-server-*.jar"
-  base-directory: "cypress/build"
+  base-directory: "build"
 cache:
   paths:
     - ".next/*"
 reports:
   junit-web-server-reports:
     files:
-      - "**/TEST-*.xml"
-    base-directory: "cypress/build/test-results"
+      - "**/results-[hash].xml"
+    base-directory: "cypress/reports/junit"
     file-format: JUNITXML
     discard-paths: no

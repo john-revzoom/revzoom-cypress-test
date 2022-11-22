@@ -9,33 +9,10 @@ const withPlugins = require("next-compose-plugins");
 
 // Tell webpack to compile the "bar" package, necessary if you're using the export statement for example
 // https://www.npmjs.com/package/next-transpile-modules
-const withTM = require("next-transpile-modules")(["antd", "@ant-design/icons"]);
+const withTM = require("next-transpile-modules");
 
 module.exports = withPlugins([[withTM]], {
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path(.*)",
-        destination: "https://app.dev.crop.photo/api/:path"
-        // destination: "https://app.daisy.crop.photo/api/:path" //Java web - server
-      }
-    ];
-  },
-
-  webpack: config => {
-    // Alias
-    config.resolve.alias["~"] = path.resolve(__dirname + "/src");
-
-    // Svgr
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ["@svgr/webpack"]
-    });
-
-    return config;
-  },
   generateBuildId: async () => {
     let version;
     let error;
@@ -57,8 +34,6 @@ module.exports = withPlugins([[withTM]], {
     outputStandalone: true
   },
   env: {
-    BUILD_VERSION:
-      process.env.AWS_CODEBUILD_VERSION || execSync("git describe --tags").toString("utf8"),
-    INTERCOM_ID: process.env.NEXT_PUBLIC_INTERCOM_APP_ID
+    BUILD_VERSION: process.env.AWS_CODEBUILD_VERSION || execSync("git describe --tags").toString("utf8")
   }
 });
