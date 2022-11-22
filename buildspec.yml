@@ -13,7 +13,7 @@ phases:
     commands:
       - npm install --no-optional
   build:
-    on-failure: ABORT
+    on-failure: CONTINUE
     commands:
       - echo Cypress run started
       # Script below will return [daisy, dev, beta, prod, unknown] based on branch name [Development/Daisy, Deployment/Dev, Deployment/Staging, Deployment/Prod, *any thing else*]
@@ -22,14 +22,14 @@ phases:
       - npm run cy:$BUILD_ENV
     finally:
       - rm -rf /root/.npm
-artifacts:
-  # end up in S3 output bucket configured with CodeBuild
-  files:
-    - "libs/pico-server-*.jar"
-  base-directory: "build"
-cache:
-  paths:
-    - ".next/*"
+# artifacts:
+#   # end up in S3 output bucket configured with CodeBuild
+#   files:
+#     - "libs/pico-server-*.jar"
+#   base-directory: "build"
+# cache:
+#   paths:
+#     - ".next/*"
 reports:
   junit-web-server-reports:
     files:
