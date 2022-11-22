@@ -21,7 +21,7 @@ module.exports = defineConfig({
   },
   video: false,
   e2e: {
-    baseUrl: "http://localhost:3006",
+    baseUrl: "https://app.dev.crop.photo",
     specPattern: "cypress/integration/**/*.spec.ts",
     supportFile: "cypress/support/commands.ts",
     env: {
