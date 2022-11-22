@@ -240,6 +240,6 @@ dist
 .pnp.*
 
 # cypress test results
-/cypress/reports/**/*
+cypress/reports/**/*
 cypress/screenshots/**
 results/my-test-output.xml
