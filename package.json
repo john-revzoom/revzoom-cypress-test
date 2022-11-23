@@ -17,9 +17,7 @@
     "start:test": "set DOT_ENV=\"test\" && next start",
     "build:test": "set DOT_ENV=\"test\" && next build",
     "cy:run": "cypress run --e2e --record --key 60804ff0-c839-446b-93bc-a8af516e5c89",
-    "cy:dev": "cypress run --e2e --config baseUrl=https://app.dev.crop.photo --record --key 60804ff0-c839-446b-93bc-a8af516e5c89",
-    "cy:daisy": "cypress run --e2e --config baseUrl=https://app.daisy.crop.photo",
-    "cy:beta": "cypress run --e2e --config baseUrl=https://app.crop.photo"
+    "cy:dev": "cypress run --e2e --config baseUrl=https://qa-mam.office.revzoom.com:6674/webclient --record --key 60804ff0-c839-446b-93bc-a8af516e5c89"
   },
   "dependencies": {
     "next": "^12.1.4",

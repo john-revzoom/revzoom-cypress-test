@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "baseUrl": "http://localhost:3006",
+      "baseUrl": "https://qa-mam.office.revzoom.com:6674/webclient",
       "target": "es5",
       "lib": ["es5", "dom"],
       "types": ["node", "cypress"]

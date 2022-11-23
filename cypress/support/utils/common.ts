@@ -1,13 +1,11 @@
 export const uiLogin = () => {
-  cy.visit("/user/login");
-  cy.location("pathname").should("eq", "/user/login");
-  cy.get("[type='email']").type(Cypress.env("username"));
-  cy.get("[type='password']").type(Cypress.env("password"));
-  cy.get("[type='submit']").click();
-  cy.get(".ant-message").should("not.exist");
+  cy.get("div > a").contains("Login with Username and Password").click();
+  cy.wait(1000);
+  cy.get("[placeholder='Username or Email']").type("cypress");
+  cy.get("[type='password']").type("28oHuKvyucctHrnN8xGuVfXk");
+  cy.get("div").contains("SIGN IN").click();
   cy.wait(5000);
-  cy.location("pathname").should("eq", "/");
-  cy.get(".ant-btn").contains("John");
+  cy.get("span").contains("Evolphin Software, Inc.").should("be.visible");
 };
 
 export const findKebabMenuInProjectCard = () => {

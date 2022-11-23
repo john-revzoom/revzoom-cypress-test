@@ -20,7 +20,7 @@ phases:
       - git branch --show-current
       - pwd
       #run cypress in desired environment that is connected to cypress cloud
-      - npm run cy:$BUILD_ENV
+      - npm run cy:$BUILD_ENV; 0
     finally:
       - rm -rf /root/.npm
 # artifacts:

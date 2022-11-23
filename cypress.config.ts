@@ -21,7 +21,9 @@ module.exports = defineConfig({
   },
   video: false,
   e2e: {
-    baseUrl: "https://app.dev.crop.photo",
+    // experimentalStudio: true,
+    // baseUrl: "https://app.dev.crop.photo",
+    baseUrl: "https://qa-mam.office.revzoom.com:6674/webclient",
     specPattern: "cypress/integration/**/*.spec.ts",
     supportFile: "cypress/support/commands.ts",
     env: {
