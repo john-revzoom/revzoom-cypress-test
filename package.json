@@ -16,6 +16,7 @@
     "tsc": "tsc",
     "start:test": "set DOT_ENV=\"test\" && next start",
     "build:test": "set DOT_ENV=\"test\" && next build",
+    "cy:open": "cypress open",
     "cy:run": "cypress run --e2e --record --key 60804ff0-c839-446b-93bc-a8af516e5c89",
     "cy:dev": "cypress run --e2e --config baseUrl=https://qa-mam.office.revzoom.com:6674/webclient --record --key 60804ff0-c839-446b-93bc-a8af516e5c89"
   },

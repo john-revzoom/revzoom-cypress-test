@@ -22,7 +22,6 @@ describe("Homepage", () => {
     cy.wait(1000);
     cy.get("header > .right > button").click();
     cy.wait(1000);
-
     cy.get("#ActivityPanel > div > div").first().contains("Moments Ago").should("be.visible");
   });
 });
